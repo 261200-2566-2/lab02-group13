@@ -3,7 +3,5 @@ public class Sensor {
     public  void  updateCurrentAQI(double aqi){
         this.aqi = aqi ;
     }
-    public void getCurrentAQI(){
-        System.out.println(this.aqi);
-    }
+
 }

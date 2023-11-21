@@ -22,6 +22,7 @@ public class AirPurifier {
       this.brand = brand ;
       this.serial_number  = serial_number ;
       this.model = model ;
+      this.mode = "auto";
       created++ ;
    }
    AirPurifier(int w , int l , int h ,int screenwidth , int screenhight, String serial_number , String brand , String model, String fiterType){
@@ -51,30 +52,39 @@ public class AirPurifier {
        }
     }
     public void setFanSpeed(int fanSpeed){
-        fan.setFanSpeed(fanSpeed); ;
+       if(power){
+           fan.setFanSpeed(fanSpeed);
+       }
     }
     public  void  getFanSpeed(){
-        System.out.println(fan.fanSpeed);
+       if(power){
+        System.out.println(fan.fanSpeed);}
     }
 
     public  static  void Created(){
         System.out.println(created);
 
     }
-    public  void  brightness(int level){
+    public  void  setBrightness(int level){
        monitor.setBrightness(level);
     }
+    public  void  setAQI(double AQI){
+       if(power){
+           sensor.updateCurrentAQI(AQI);
+       }
+
+    }
     public  void  getSpace(){
-        System.out.println("Brand is " + brand);
-        System.out.println("Seraial is " + serial_number);
-        System.out.println("modal "+ model);
-        System.out.println("Mode now is "+mode );
-        System.out.println("Power now is " + power);
-        System.out.println("Created now " + created);
-        System.out.println("Fiter is " +fiter.type);
-        System.out.println("Fan speed is " + fan.fanSpeed);
+        System.out.println("Brand = " + brand);
+        System.out.println("Seraial = " + serial_number);
+        System.out.println("modal = "+ model);
+        System.out.println("Mode = "+mode );
+        System.out.println("Power = " + power);
+        System.out.println("Created = " + created);
+        System.out.println("Fiter = " +fiter.type);
+        System.out.println("Fan speed = " + fan.fanSpeed);
         System.out.println("body is "+ "len = " +body.lengthy+ "high = " + body.high+" width = " + body.Width);
-        System.out.println("monitor hight = " + monitor.hight +"monitor lendth"+ monitor.width+"monitor brin " + monitor.brightness);
+        System.out.println("monitor hight = " + monitor.hight +" width = "+ monitor.width+" brightness = " + monitor.brightness);
         System.out.println("Sensor = " + sensor.aqi);
     }
 
