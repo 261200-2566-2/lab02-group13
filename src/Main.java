@@ -3,7 +3,8 @@
 public class Main {
     public static void main(String[] args) {
         int w = 10 ; int l = 10 ; int h  = 10 ; int screenwidth = 10 ; int screenhight = 10 ; String serial_number = "OOP" ; String brand = "TonLak" ; String model = "ProMax";
-        AirPurifier ton = new AirPurifier(w ,l ,h , screenwidth , screenhight ,serial_number , brand , model);
+        String fitertype = "TTB";
+        AirPurifier ton = new AirPurifier(w ,l ,h , screenwidth , screenhight ,serial_number , brand , model , fitertype);
         ton.getSpace();
 
         ton.setPowerOn();
