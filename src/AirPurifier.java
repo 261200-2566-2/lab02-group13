@@ -74,7 +74,7 @@ public class AirPurifier {
        }
 
     }
-    public  void  getSpace(){
+    public  void  getinformation(){
         System.out.println("Brand = " + brand);
         System.out.println("Seraial = " + serial_number);
         System.out.println("modal = "+ model);
@@ -83,8 +83,8 @@ public class AirPurifier {
         System.out.println("Created = " + created);
         System.out.println("Fiter = " +fiter.type);
         System.out.println("Fan speed = " + fan.fanSpeed);
-        System.out.println("body is "+ "len = " +body.lengthy+ "high = " + body.high+" width = " + body.Width);
-        System.out.println("monitor hight = " + monitor.hight +" width = "+ monitor.width+" brightness = " + monitor.brightness);
+        System.out.println("body : "+ "len = " +body.lengthy+ "high = " + body.high+" width = " + body.Width);
+        System.out.println("monitor: hight = " + monitor.hight +" width = "+ monitor.width+" brightness = " + monitor.brightness);
         System.out.println("Sensor = " + sensor.aqi);
     }
 

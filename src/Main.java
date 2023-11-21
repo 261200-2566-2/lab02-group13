@@ -11,5 +11,8 @@ public class Main {
         ton.setFanSpeed(1000);
         ton.setAQI(91.5);
         ton.getSpace();
+        ton.setMode("FullLode");
+        ton.setBrightness(1000);
+        ton.getSpace();
     }
 }
