@@ -1,17 +1,22 @@
 # AirPurifier Class
+
 ## What should be instance varible ?
+
 > * width -> กำหนดความกว้างของขนาดเครื่อง
 > * length -> กำหนดความยาวของเครื่อง
 > * height -> กำหนดความสูงของเครื่อง
 > * screen_width -> กำหนดขยาดหน้าจอ
 > * screen_height ->กำหนดขนาดหน้าจอ
-> * brand  -> กำหนดชื่อ แบรน์
+> * brand -> กำหนดชื่อ แบรนด์
 > * model -> กำหนด model ของเครื่อง
 > * fiter_type -> กำหนดชนิดของ Fiter
+
 ## What should be instance methods ?
-> ### 
+
+> ###  
 
 ## What should be class variables ?
+
 > * Fiter fiter = กำหนด Fiter
 > * Sensor sensor = กำหนด sensor
 > * Fan fan = กำหนดพัดลม
@@ -23,7 +28,9 @@
 > * String serial_number = เลขของเครื่อง
 > * String brand = กำหนดว่าจะเป็นแบรน์อะไร
 > * String model = กำหนด model ของเครื่อง
+
 ## What should be class methods ?
+
 > ### 1) setPowerOn and SetPowerOff
 > - ทำการปิด และเปิดเครื่อง
 > ### 2) checkMode and setMode

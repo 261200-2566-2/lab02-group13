@@ -1,9 +1,9 @@
-public class Fiter {
+public class Filter {
     String type;
-    Fiter(String type){
+    Filter(String type){
        this.type = type ;
     }
-    Fiter(){
+    Filter(){
         this("normal");
     }
 }

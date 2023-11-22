@@ -1,10 +1,11 @@
 public class Monitor {
-    int brightness = 0 ;
-    int width ;
-    int  hight ;
-    Monitor(int screenwidth , int screenhight){
-        this.width = screenwidth ;
-        this.hight  = screenhight ;
+    int brightness = 0;
+    int width;
+    int height;
+
+    Monitor(int screenWidth, int screenHeight) {
+        this.width = screenWidth;
+        this.height = screenHeight;
 
     }
 
