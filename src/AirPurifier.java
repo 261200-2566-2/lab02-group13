@@ -1,15 +1,15 @@
-import java.sql.SQLOutput;
-
 public class AirPurifier {
     Filter filter;
     Sensor sensor;
     Fan fan;
     Specs body;
     Monitor monitor;
+    SerialNumber serialNumber;
     int mode;
     boolean power = false;
     static int created = 0;
-    String serial_number;
+
+
 
     AirPurifier(int w, int l, int h, int screenWidth, int screenHeight) {
         body = new Specs(w, l, h);
@@ -17,6 +17,7 @@ public class AirPurifier {
         fan = new Fan();
         monitor = new Monitor(screenWidth, screenHeight);
         sensor = new Sensor();
+        serialNumber = new SerialNumber();
     }
 
     public void togglePower() {
@@ -66,5 +67,9 @@ public class AirPurifier {
 
     public static void Created() {
         System.out.println(created);
+    }
+
+    public void getSerialNumber() {
+        System.out.println(serialNumber);
     }
 }
