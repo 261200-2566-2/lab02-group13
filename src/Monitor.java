@@ -8,7 +8,7 @@ public class Monitor {
         this.height = screenHeight;
 
     }
-
+    
     public void setBrightness(int brightness) {
         this.brightness = brightness;
     }

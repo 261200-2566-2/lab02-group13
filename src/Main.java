@@ -1,18 +1,42 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        int w = 10 ; int l = 10 ; int h  = 10 ; int screenwidth = 10 ; int screenhight = 10 ; String serial_number = "OOP" ; String brand = "TonLak" ; String model = "ProMax";
-        String fitertype = "TTB";
-        AirPurifier ton = new AirPurifier(w ,l ,h , screenwidth , screenhight ,serial_number , brand , model , fitertype);
-        ton.getSpace();
+        String model = "Pro", brand = "Apple", filterType = "Fiter Pro Apple", serialNumber = "1150";
+        double[] dimension = {100 , 100 , 100,};
+        AirPurifier p1 = new AirPurifier(brand, serialNumber, model, dimension);
+        p1.setFanSpeed(1000);
+        p1.turnOn();
+        p1.setMode(200);
+        p1.setBrightness(1000);
+        p1.setFanSpeed(1000);
+        updateAQI(p1);
+        p1.turnOff();
+        p1.setMode(200);
+        p1.setBrightness(1000);
+        p1.setFanSpeed(1000);
+        changeFilter(p1, filterType);
+    }
+    
+    public static void updateAQI(AirPurifier p){
+        double AQI = Math.random() * 599 + 1;
+        p.updateAQI(AQI);
 
-        ton.setPowerOn();
-        ton.setFanSpeed(1000);
-        ton.setAQI(91.5);
-        ton.getSpace();
-        ton.setMode("FullLode");
-        ton.setBrightness(1000);
-        ton.getSpace();
+    }
+    public static void changeFilter(AirPurifier p , String Type){
+        p.filter.setType(Type);
+
+    }
+     public static void printSpecs(AirPurifier p){
+        System.out.println("=================== Specs ================");
+        System.out.println("Brand: " + p.specs.brand);
+        System.out.println("Model: " + p.specs.model);
+        System.out.println("SerialNumber: " + p.specs.serialNumber);
+        System.out.println("FilterType: " + p.filter.type);
+        System.out.println("=================== Status ================");
+        System.out.println("Power status: " + p.power);
+        System.out.println("Mode: " + p.mode);
+        System.out.println("Monitor Brightness: "+ p.monitor.brightness);
+        System.out.println("Fanspeed: " + p.getFanSpeed());
+        System.out.println("AQI: " + (int)p.sensor.aqi);
+        System.out.println("===========================================");
     }
 }

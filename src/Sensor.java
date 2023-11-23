@@ -1,5 +1,5 @@
 public class Sensor {
-    double aqi = 0;
+    double aqi;
 
     public void updateCurrentAQI(double aqi) {
         this.aqi = aqi;
