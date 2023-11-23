@@ -1,6 +1,10 @@
 public class SerialNumber {
-    String serialNumber = "FEDCBA9876543210";
-    public void setSerialNumber(String serialNumber) {
-        this.serialNumber = serialNumber;
+    String serialNumber;
+
+    SerialNumber(String serialNumber){
+        this.serialNumber = serialNumber ;
+    }
+    SerialNumber(){
+        this("FEDCBA9876543210");
     }
 }
