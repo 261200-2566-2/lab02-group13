@@ -14,8 +14,13 @@ public class Main {
         p1.setBrightness(1000);
         p1.setFanSpeed(1000);
         changeFilter(p1, filterType);
+        AirPurifier[] p  = new AirPurifier[101];
+        for (int i = 0; i < 100; i++) {
+            p[i] = new AirPurifier(brand, serialNumber, model, dimension);
+        }
+        System.out.println(AirPurifier.volume);
     }
-    
+
     public static void updateAQI(AirPurifier p){
         double AQI = Math.random() * 599 + 1;
         p.updateAQI(AQI);

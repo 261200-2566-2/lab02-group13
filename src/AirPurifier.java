@@ -14,7 +14,7 @@ public class AirPurifier {
         fan = new Fan();
         monitor = new Monitor((int)dimension[0]*25/100 , (int)dimension[2]*25/100);
         sensor = new Sensor();
-        
+        volume++;
     }
     
     public void turnOn() {
