@@ -1,43 +1,57 @@
-# AirPurifier Class
+# 1. Give a complete description of AirPurifier class
 
-## What should be instance variables ?
+| instance variables | instance methods | class variables | class methods |
+| --- | --- | --- | --- |
+| String model | updateAQI() | Filter filter | setMode() |
+| String brand | changeFilter() | Sensor sensor | setBrightness() |
+| int[] dimension | printSpecs() | Fan fan | setFanSpeed() |
+| String filterType |  | Specs specs | updateAQI() |
+| String serialNumber |  | Monitor monitor | getVolume() |
+|  |  | int mode | turnOn() |
+|  |  | boolean power | turnOff() |
+|  |  | int volume |  |
 
-> * width -> กำหนดความกว้างของขนาดเครื่อง
-> * length -> กำหนดความยาวของเครื่อง
-> * height -> กำหนดความสูงของเครื่อง
-> * screen_width -> กำหนดความกว้างของหน้าจอ
-> * screen_height -> กำหนดความสูงของหน้าจอ
-> * brand -> กำหนดชื่อแบรนด์
-> * model -> กำหนด model ของเครื่อง
-> * filter_type -> กำหนดชนิดของ Filter
+# 2. For each method proposed above, how do you plan to implement it?
 
-## What should be instance methods ?
+## Instance methods
 
-> ###  
+- updateAQI()
+    - รับค่าคุณภาพของอากาศ
+- changeFilter()
+    - เปลี่ยน Filter
+- printSpecs()
+    - แสดงผลข้อมูลของเครื่องฟอกอากาศทั้งหมด
 
-## What should be class variables ?
+## Class methods
 
-> * Filter filter = กำหนด Filter
-> * Sensor sensor = กำหนด sensor
-> * Fan fan = กำหนดพัดลม
-> * Spec body = กำหนด Space ของเครื่อง
-> * Monitor monitor = กำหนดหน้าจอของเครื่องฟอก
-> * String mode = Mode ของเครื่องฟอก
-> * boolean power = สถานะของเครื่อง
-> * static int created = ผลิตมาเเล้วกี่เครื่อง
-> * String serial_number = เลขของเครื่อง
-> * String brand = กำหนดว่าจะเป็นแบรนด์อะไร
-> * String model = กำหนด model ของเครื่อง
+- turnOn()
+    - ตั้งค่าสถานะการทำงานของเครื่องเป็นเปิด
+- turnOff()
+    - ตั้งค่าสถานะการทำงานของเครื่องเป็นปิด
+- setMode()
+    - ตั้งค่าโหมดการทำงานของเครื่อง
+- setBrightness()
+    - ตั้งค่าความสว่างของหน้าจอแสดงผล
+- setFanSpeed()
+    - ตั้งค่าความเร็วของพัดลม
+- getFanSpeed()
+    - รับค่าความเร็วของพัดลมปัจจุบัน
+- getVolume()
+    - ตรวจสอบจำนวนการผลิตทั้งหมดของเครื่อง
 
-## What should be class methods ?
+| Instance methods | Input | Output |
+| --- | --- | --- |
+| updateAQI() | Airpurifier object | - |
+| changeFilter() | Airpurifier object, String | - |
+| printSpecs() | Airpurifier object | รายละเอียดของเครื่องฟอกอากาศ |
 
-> ### 1) setPowerOn and SetPowerOff
-> - ทำการปิดและเปิดเครื่อง
-> ### 2) checkMode and setMode
-> - ทำการดูว่าตอนนี้อยู่โหมดไหน และ ทำการเปลี่ยนโหมดให้กับเครื่อง
-> ### 3) setFanSpeed and getFanSpeed
-> - ทำการตั้งความเร็วของพัดลม และทำการ set ความเร็วของพัดลม
-> ### 4) setBrightness and Created
-> - ทำการตั้งค่าความสว่างหน้าจอ และ ทำการนับว่าสร้างไปกี่เครื่องแล้ว
-> ### 5) getinformation
-> - เป็น methods เอาไว้แสดงข้อมูลทั้งหมด ที่เป็นอยู่นะตอนนี้
+| Class methods | Input | Output |
+| --- | --- | --- |
+| setMode() | int | - |
+| setBrightness() | int | - |
+| setFanSpeed() | int | - |
+| getFanSpeed() | - | int |
+| updateAQI() | double | - |
+| getVolume() | - | int |
+| turnOn() | - | - |
+| turnOff() | - | - |
