@@ -5,11 +5,11 @@
 > * width -> กำหนดความกว้างของขนาดเครื่อง
 > * length -> กำหนดความยาวของเครื่อง
 > * height -> กำหนดความสูงของเครื่อง
-> * screen_width -> กำหนดขยาดหน้าจอ
-> * screen_height ->กำหนดขนาดหน้าจอ
-> * brand -> กำหนดชื่อ แบรนด์
+> * screen_width -> กำหนดความกว้างของหน้าจอ
+> * screen_height -> กำหนดความสูงของหน้าจอ
+> * brand -> กำหนดชื่อแบรนด์
 > * model -> กำหนด model ของเครื่อง
-> * fiter_type -> กำหนดชนิดของ Fiter
+> * filter_type -> กำหนดชนิดของ Filter
 
 ## What should be instance methods ?
 
@@ -17,7 +17,7 @@
 
 ## What should be class variables ?
 
-> * Fiter fiter = กำหนด Fiter
+> * Filter filter = กำหนด Filter
 > * Sensor sensor = กำหนด sensor
 > * Fan fan = กำหนดพัดลม
 > * Spec body = กำหนด Space ของเครื่อง
@@ -26,7 +26,7 @@
 > * boolean power = สถานะของเครื่อง
 > * static int created = ผลิตมาเเล้วกี่เครื่อง
 > * String serial_number = เลขของเครื่อง
-> * String brand = กำหนดว่าจะเป็นแบรน์อะไร
+> * String brand = กำหนดว่าจะเป็นแบรนด์อะไร
 > * String model = กำหนด model ของเครื่อง
 
 ## What should be class methods ?
@@ -36,7 +36,7 @@
 > ### 2) checkMode and setMode
 > - ทำการดูว่าตอนนี้อยู่โหมดไหน และ ทำการเปลี่ยนโหมดให้กับเครื่อง
 > ### 3) setFanSpeed and getFanSpeed
-> - ทำการตั้งความเร็วของพัดลม และทำการ setความเร็วของพัดลม
+> - ทำการตั้งความเร็วของพัดลม และทำการ set ความเร็วของพัดลม
 > ### 4) setBrightness and Created
 > - ทำการตั้งค่าความสว่างหน้าจอ และ ทำการนับว่าสร้างไปกี่เครื่องแล้ว
 > ### 5) getinformation
