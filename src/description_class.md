@@ -1,6 +1,6 @@
 # AirPurifier Class
 
-## What should be instance varible ?
+## What should be instance variables ?
 
 > * width -> กำหนดความกว้างของขนาดเครื่อง
 > * length -> กำหนดความยาวของเครื่อง
@@ -32,7 +32,7 @@
 ## What should be class methods ?
 
 > ### 1) setPowerOn and SetPowerOff
-> - ทำการปิด และเปิดเครื่อง
+> - ทำการปิดและเปิดเครื่อง
 > ### 2) checkMode and setMode
 > - ทำการดูว่าตอนนี้อยู่โหมดไหน และ ทำการเปลี่ยนโหมดให้กับเครื่อง
 > ### 3) setFanSpeed and getFanSpeed
