@@ -1,4 +1,4 @@
-public class Main {
+public class Lab02 {
     public static void main(String[] args) {
         String model = "Pro", brand = "Apple", filterType = "Fiter Pro Apple", serialNumber = "1150";
         double[] dimension = {100 , 100 , 100,};
