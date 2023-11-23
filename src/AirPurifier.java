@@ -18,7 +18,7 @@ public class AirPurifier {
     }
     
     public void turnOn() {
-        double magicAQI = Math.random()*499+1 ;
+        double magicAQI = Math.random()*499+1; // Math random from StackOverflow
         power = true;
         setFanSpeed(50);
         setMode(1);

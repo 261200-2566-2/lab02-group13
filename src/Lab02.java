@@ -18,11 +18,11 @@ public class Lab02 {
         for (int i = 0; i < 100; i++) {
             p[i] = new AirPurifier(brand, serialNumber, model, dimension);
         }
-        System.out.println(AirPurifier.volume);
+        AirPurifier.getVolume();
     }
 
     public static void updateAQI(AirPurifier p){
-        double AQI = Math.random() * 599 + 1;
+        double AQI = Math.random() * 599 + 1; // Math random from StackOverflow
         p.updateAQI(AQI);
 
     }
