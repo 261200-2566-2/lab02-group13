@@ -1,17 +1,22 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/M0TFBBAV)
+# Lab02
+
 # 1. Give a complete description of AirPurifier class
 
 | instance variables | instance methods | class variables | class methods |
 | --- | --- | --- | --- |
-| String model | updateAQI() | Filter filter | getVolume() |
-| String brand | changeFilter() | Sensor sensor |  |
-| int[] dimension | printSpecs() | Fan fan |  |
-| String filterType | turnOn() | Specs specs |  |
-| String serialNumber | turnOff() | Monitor monitor |  |
-|  | updateAQI() | int mode |  |
-|  | setMode() | boolean power |  |
-|  | setBrightness() | int volume |  |
-|  | setFanSpeed() |  |  |
+| String model | updateAQI() | int volume | getVolume() |
+| String brand | changeFilter() |  |  |
+| int[] dimension | printSpecs() |  |  |
+| String filterType | turnOn() |  |  |
+| String serialNumber | turnOff() |  |  |
+| Filter filter | updateAQI() |  |  |
+| Sensor sensor | setMode() |  |  |
+| Fan fan | setBrightness() |  |  |
+| Specs specs | setFanSpeed() |  |  |
+| Monitor monitor |  |  |  |
+| int mode |  |  |  |
+| boolean power |  |  |  |
 
 # 2. For each method proposed above, how do you plan to implement it?
 
