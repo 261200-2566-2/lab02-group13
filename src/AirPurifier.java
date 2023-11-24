@@ -1,11 +1,11 @@
 public  class  AirPurifier {
-    public static Filter filter;
-    public static Sensor sensor;
-    public static Fan fan;
-    public static Specs specs;
-    public static Monitor monitor;
-    public static String mode;
-    public static boolean power = false;
+    public Filter filter;
+    public Sensor sensor;
+    public Fan fan;
+    public Specs specs;
+    public Monitor monitor;
+    public String mode;
+    public boolean power = false;
     public static int volume = 0;
 
     AirPurifier(String brand, String serialNumber, String model, double[] dimension) {
