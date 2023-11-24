@@ -3,6 +3,7 @@ public class Lab02 {
         String brand = "Appel" , serialNumber = "123123123", model = "Pro" ; 
         double[] dimension ={100 ,100 ,100} ;
         AirPurifier p1 = new AirPurifier(brand , serialNumber , model , dimension);
+        AirPurifier p2 = new AirPurifier(brand , serialNumber , model , dimension);
         p1.turnOn();
         printSpecs(p1);
         p1.updateAQI(1000);
@@ -16,6 +17,20 @@ public class Lab02 {
         p1.setBrightness(1000);
         p1.setMode("AAAAA");
         p1.changeFilter("OOOO"); 
+        p2.turnOn();
+        printSpecs(p2);
+        p2.updateAQI(1000);
+        p2.setFanSpeed(1000);
+        p2.setBrightness(1000);
+        p2.setMode("Fuck You");
+        p2.changeFilter("Apple fiter Pro");
+        p2.turnOff();
+        p2.updateAQI(1000);
+        p2.setFanSpeed(1000);
+        p2.setBrightness(1000);
+        p2.setMode("AAAAA");
+        p2.changeFilter("OOOO"); 
+        
 
     }
     public static void printSpecs(AirPurifier p){
