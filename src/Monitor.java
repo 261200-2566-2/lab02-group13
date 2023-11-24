@@ -10,6 +10,10 @@ public class Monitor {
     }
     
     public void setBrightness(int brightness) {
-        this.brightness = brightness;
+        if (brightness >= 0 && brightness <= 100) {
+            this.brightness = brightness;
+        }else{
+            System.out.println("Brightness invalid should between 0 and 100");
+        }
     }
 }
