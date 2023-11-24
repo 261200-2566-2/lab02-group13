@@ -14,24 +14,24 @@ public  class  AirPurifier {
         fan = new Fan();
         monitor = new Monitor((int) dimension[0] * 25 / 100, (int) dimension[2] * 25 / 100);
         sensor = new Sensor();
-        volume++;
+        AirPurifier.volume++;
     }
 
-    public void turnOn(AirPurifier p) {
+    public void turnOn() {
         double magicAQI = Math.random() * 499 + 1; // Math random from StackOverflow
         power = true;
-        p.setFanSpeed(50);
-        p.setMode("auto");
-        p.updateAQI(magicAQI);
-        p.setBrightness(100);
+        setFanSpeed(50);
+        setMode("auto");
+        updateAQI(magicAQI);
+        setBrightness(100);
     }
 
-    public void turnOff(AirPurifier p) {
+    public void turnOff() {
         power = false;
-        p.setFanSpeed(0);
-        p.setMode("OFF");
-        p.updateAQI(0);
-        p.setBrightness(0);
+        setFanSpeed(0);
+        setMode("OFF");
+        updateAQI(0);
+        setBrightness(0);
     }
 
     public void setMode(String modee) {
@@ -70,32 +70,20 @@ public  class  AirPurifier {
             sensor.updateCurrentAQI(0);
         }
     }
-    public void updateAQI(AirPurifier p){
+    public void updateAQI(){
         double AQI = Math.random() * 599 + 1; // Math random from StackOverflow
-        p.updateAQI(AQI);
+        updateAQI(AQI);
 
     }
-    public void changeFilter(AirPurifier p , String Type){
-        p.filter.setType(Type);
+
+    public void changeFilter(String Type){
+        filter.setType(Type);
 
     }
-     public static void printSpecs(AirPurifier p){
-        System.out.println("=================== Specs ================");
-        System.out.println("Brand: " + p.specs.brand);
-        System.out.println("Model: " + p.specs.model);
-        System.out.println("SerialNumber: " + p.specs.serialNumber);
-        System.out.println("FilterType: " + p.filter.type);
-        System.out.println("=================== Status ================");
-        System.out.println("Power status: " + p.power);
-        System.out.println("Mode: " + p.mode);
-        System.out.println("Monitor Brightness: "+ p.monitor.brightness);
-        System.out.println("Fanspeed: " + p.getFanSpeed());
-        System.out.println("AQI: " + (int)p.sensor.aqi);
-        System.out.println("===========================================");
-    }
+    
     
 
     public static void getVolume() {
-        System.out.println("All Production: " + volume);
+        System.out.println("All Production: " + AirPurifier.volume);
     }
 }
