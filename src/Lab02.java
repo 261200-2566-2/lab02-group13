@@ -19,29 +19,8 @@ public class Lab02 {
             p[i] = new AirPurifier(brand, serialNumber, model, dimension);
         }
         AirPurifier.getVolume();
+        turnOn()
     }
 
-    public static void updateAQI(AirPurifier p){
-        double AQI = Math.random() * 599 + 1; // Math random from StackOverflow
-        p.updateAQI(AQI);
-
-    }
-    public static void changeFilter(AirPurifier p , String Type){
-        p.filter.setType(Type);
-
-    }
-     public static void printSpecs(AirPurifier p){
-        System.out.println("=================== Specs ================");
-        System.out.println("Brand: " + p.specs.brand);
-        System.out.println("Model: " + p.specs.model);
-        System.out.println("SerialNumber: " + p.specs.serialNumber);
-        System.out.println("FilterType: " + p.filter.type);
-        System.out.println("=================== Status ================");
-        System.out.println("Power status: " + p.power);
-        System.out.println("Mode: " + p.mode);
-        System.out.println("Monitor Brightness: "+ p.monitor.brightness);
-        System.out.println("Fanspeed: " + p.getFanSpeed());
-        System.out.println("AQI: " + (int)p.sensor.aqi);
-        System.out.println("===========================================");
-    }
+   
 }
